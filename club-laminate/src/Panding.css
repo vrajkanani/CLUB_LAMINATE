@@ -1,0 +1,53 @@
+.container {
+  margin-top: 20px;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card-body {
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-subtitle {
+  font-size: 16px;
+  color: #555;
+}
+
+.list-group-item {
+  font-size: 14px;
+  color: #777;
+}
+.cancelButton,
+.completeButton {
+  padding-inline: 15px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.cancelButton {
+  border: 2px solid red;
+  color: white;
+  background-color: red;
+}
+
+.completeButton {
+  border: 2px solid green;
+  color: white;
+  background-color: green;
+}

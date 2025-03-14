@@ -1,0 +1,108 @@
+.BNcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.BNform-wrapper {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+}
+
+.BNtitle {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #0cba31;
+}
+
+/* Contact Details Styling */
+.BNcontact-details {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #0cba31;
+  border-radius: 10px;
+}
+
+.BNcontact-details p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.BNcontact-details strong {
+  color: black;
+}
+
+/* Form Row Styling */
+.BNform-row {
+  margin-bottom: 1.5rem;
+}
+
+.BNform-row label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.BNform-row input,
+.BNform-row textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+.BNform-row input:focus,
+.BNform-row textarea:focus {
+  border-color: #3085d6;
+  outline: none;
+}
+
+/* Textarea Styling */
+.BNform-row textarea {
+  height: 150px;
+  resize: none;
+}
+
+/* Submit Button */
+.BNform-row button {
+  background-color: #1fb943;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.BNform-row button:hover {
+  background-color: #05b72e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .BNform-wrapper {
+    padding: 1.5rem;
+  }
+
+  .BNtitle {
+    font-size: 1.75rem;
+  }
+
+  .BNform-row button {
+    font-size: 0.95rem;
+  }
+}

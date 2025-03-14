@@ -1,0 +1,131 @@
+/* General Styling for About Us Page */
+.about-us {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  padding: 2rem;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 2rem;
+  background-color: #19b119;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-section p {
+  font-size: 1.25rem;
+}
+
+.mission-section,
+.values-section,
+.team-section,
+.contact-section {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.values-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.values-section li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.values-section li::before {
+  content: "✔";
+  color: #27ae60;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.team-section {
+  text-align: center;
+}
+
+.team-members {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.team-member {
+  text-align: center;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.contact-section {
+  text-align: center;
+}
+
+.contact-section p {
+  font-size: 1rem;
+}
+
+.contact-section strong {
+  font-weight: bold;
+}
+
+.responsive-map {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.responsive-map iframe {
+  width: 100%;
+  max-width: 600px;
+  height: 450px;
+  border: 0;
+  border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .team-members {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .team-member img {
+    width: 120px;
+    height: 120px;
+  }
+}

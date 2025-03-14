@@ -1,0 +1,40 @@
+.container-fluid {
+    width: 100%;
+    margin: 20px auto;
+  }
+  
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #4caf50; /* Green border */
+  }
+  
+  .comparison-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #4caf50; /* Green border for table rows */
+  }
+  
+  .comparison-table tr:last-child td {
+    border-bottom: none; /* Remove bottom border for the last row */
+  }
+  
+  .comparison-table td:first-child {
+    font-weight: bold;
+    width: 200px; /* Set width for the first column */
+  }
+  
+  /* Hover effect */
+  .comparison-table tr:hover {
+    background-color: #f1f1f1; /* Light gray background on hover */
+  }
+
+  .closeButton {
+    background-color: transparent; /* Set initial background color to transparent */
+  }
+  
+  .closeButton:hover {
+    color: white;
+    background-color: #28a745; /* Change background color to green on hover */
+  }
+  

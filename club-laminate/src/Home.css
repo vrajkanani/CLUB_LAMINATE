@@ -1,0 +1,44 @@
+.gallery{
+    display: flex;
+    width: 40%;
+    height: 400px;
+    gap: 2px;
+    padding-left: 10px;
+}
+
+.gallery > img{
+    width: 15%;
+    height: 350px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    transition: all ease 0.5s;
+}
+
+.gallery >img:hover{
+    width: 100%;
+    scale: 1.1;
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #2bd539;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    /* font-weight: bold; */
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  .floating-button:hover {
+    background-color: #4ed84b;
+  }
+  

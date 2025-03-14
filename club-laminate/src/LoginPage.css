@@ -1,0 +1,82 @@
+/* Scoped styling for the LoginPage only */
+.login-page-container {
+  height: 78vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: linear-gradient(120deg, #50e787, #89f0eb); */
+}
+
+.login-page-container .login-container {
+  max-width: 900px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+}
+
+.login-page-container .form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.login-page-container h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.login-page-container input::placeholder {
+  font-size: 0.95rem;
+  color: #95a5a6;
+}
+
+.login-page-container .form-group {
+  margin-bottom: 1rem;
+}
+
+.login-page-container button {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.login-page-container .btn-block {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.login-page-container .card {
+  border: none;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.login-page-container .circle-one,
+.login-page-container .circle-two {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(52, 152, 219, 0.3);
+}
+
+.login-page-container .circle-one {
+  width: 200px;
+  height: 200px;
+  top: -50px;
+  left: -50px;
+}
+
+.login-page-container .circle-two {
+  width: 300px;
+  height: 300px;
+  bottom: -100px;
+  right: -100px;
+}

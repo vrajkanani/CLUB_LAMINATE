@@ -1,0 +1,23 @@
+/* Custom container width for navbar */
+.custom-navbar-container {
+  max-width: 960px; /* Default max-width */
+}
+
+/* Adjust max-width for larger screens */
+@media (min-width: 768px) {
+  .custom-navbar-container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .custom-navbar-container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .custom-navbar-container {
+    max-width: 1140px;
+  }
+}
