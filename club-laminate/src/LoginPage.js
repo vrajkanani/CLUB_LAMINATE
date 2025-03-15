@@ -17,7 +17,7 @@ const LoginPage = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:3030/forgot', {
+      const response = await fetch('https://club-laminate-server.onrender.com/forgot', {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
