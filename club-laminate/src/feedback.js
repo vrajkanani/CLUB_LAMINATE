@@ -11,14 +11,14 @@ const FeedBack = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:3030/messages")
+    fetch("https://club-laminate-server.onrender.com/messages")
       .then((res) => res.json())
       .then((data) => setMessage(data));
   }, [message]);
 
   const handleCancel = async (msgId, event) => {
     try {
-      await fetch(`http://localhost:3030/messages/${msgId}`, {
+      await fetch(`https://club-laminate-server.onrender.com/messages/${msgId}`, {
         method: "DELETE",
       });
       event.preventDefault();

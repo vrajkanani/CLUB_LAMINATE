@@ -6,7 +6,7 @@ import "./ContactUsPage.css";
 const ContactUsPage = () => {
   const navigate = useNavigate();
   const [data, setData] = useState({ name: "", email: "", message: "" });
-  const apiUrl = "http://localhost:3030/send-message";
+  const apiUrl = "https://club-laminate-server.onrender.com/send-message";
 
   const handleChange = (e) => {
     const { name, value } = e.target;

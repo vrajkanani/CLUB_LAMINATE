@@ -17,7 +17,8 @@ const BookNow = () => {
     address: "",
   });
 
-  const apiUrl = "http://localhost:3030/BookNow";
+  const apiUrl = "https://club-laminate-server.onrender.com/BookNow";
+  // const apiUrl = "http://localhost:3030/BookNow";
 
   const handleChange = (e) => {
     const { name, value } = e.target;

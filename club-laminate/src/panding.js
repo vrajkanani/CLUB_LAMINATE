@@ -7,14 +7,14 @@ function Panding() {
   const [orders, setOrders] = useState([]);
   const navigate = useNavigate();
   useEffect(() => {
-    fetch("http://localhost:3030/orderList")
+    fetch("https://club-laminate-server.onrender.com/orderList")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);
 
   const handleCancel = async (orderId) => {
     try {
-      await fetch(`http://localhost:3030/orderList/${orderId}`, {
+      await fetch(`https://club-laminate-server.onrender.com/orderList/${orderId}`, {
         method: "DELETE",
       });
       setOrders(orders.filter((order) => order._id !== orderId));
@@ -26,7 +26,7 @@ function Panding() {
   const handleComplete = async (order) => {
     try {
       const deleteResponse = await fetch(
-        `http://localhost:3030/orderList/${order._id}`,
+        `https://club-laminate-server.onrender.com/orderList/${order._id}`,
         {
           method: "DELETE",
         }
@@ -38,7 +38,7 @@ function Panding() {
         );
       }
 
-      const addResponse = await fetch("http://localhost:3030/addConform", {
+      const addResponse = await fetch("https://club-laminate-server.onrender.com/addConform", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

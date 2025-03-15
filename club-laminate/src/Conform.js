@@ -6,7 +6,7 @@ const Conform = () => {
   const [selectedOrder, setSelectedOrder] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:3030/conformList")
+    fetch("https://club-laminate-server.onrender.com/conformList")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);
