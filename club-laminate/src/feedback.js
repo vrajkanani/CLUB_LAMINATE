@@ -38,7 +38,7 @@ const FeedBack = () => {
 
     const recipientEmail = form.current["from_email"].value;
     emailjs
-      .sendForm("service_m4toew5", "template_f6o7urs", form.current, {
+      .sendForm("service_c34k6c5", "template_blv462o", form.current, {
         to_email: recipientEmail,
         publicKey: "6SXlrsmeiD695P7x9",
       })
@@ -48,7 +48,7 @@ const FeedBack = () => {
           await Swal.fire({
             position: "center",
             icon: "success",
-            title: "Your work has been saved",
+            title: "Email sent!",
             showConfirmButton: false,
             timer: 1500,
           });
@@ -65,74 +65,46 @@ const FeedBack = () => {
 
   return (
     <div className="container">
-      <div className="row">
+    <div className="row">
         {message.map((msg) => (
-          <div
-            className="col-lg-3 col-md-4 col-sm-6"
-            // style={{backgroundColor:"lightyellow"}}
-            style={{
-              marginTop: "25px",
-              marginBottom: "32px",
-            }}
-            key={msg._id}
-          >
-            <div className="main3">
-              <ul className="list-group">
-                <li className="list-group-item">
-                  <div className="msgcard3">
-                    <div
-                      className="card_content3"
-                      //   style={{ fontFamily: "Comic Sans MS" }}
-                    >
-                      <h2 className="card_title3">Name : {msg.name}</h2>
-                      <div
-                        className="card_text3"
-                        style={{ fontSize: "15px", paddingBottom: "3px" }}
-                      >
-                        <br />
-                        <p>Email : {msg.email}</p>
-                        <p>Message : {msg.message}</p>
-                      </div>
-                      <br />
-                      <div>
-                        <button
-                          style={{
-                            paddingBottom: "1px",
-                            marginRight: "10px",
-                            border: "2px solid green",
-                            borderRadius: "5px",
-                          }}
-                          type="button"
-                          className="completeButton"
-                          data-bs-toggle="modal"
-                          data-bs-target="#staticBackdrop"
-                          onClick={() => handleReply(msg.email)}
-                        >
-                          reply
-                        </button>
-
-                        <button
-                          style={{
-                            paddingBottom: "1px",
-                            border: "2px solid red",
-                            borderRadius: "5px",
-                          }}
-                          className="cancelButton"
-                          onClick={(event) => handleCancel(msg._id, event)}
-                        >
-                          delete
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
+            <div className="col-lg-3 col-md-4 col-sm-6" style={{ marginTop: "25px", marginBottom: "20px" }} key={msg._id}>
+                <div className="main3">
+                    <ul className="list-group">
+                        <li className="list-group-item">
+                            <div className="msgcard3">
+                                <div className="card_content3">
+                                    <h4 className="card_title3" style={{ color:"black" }}>Name: {msg.name}</h4>
+                                    <div className="card_text3" style={{ color:"black", fontSize: "15px" }}>
+                                        <p>Email: {msg.email}</p>
+                                        <p>Message: {msg.message}</p>
+                                    </div>
+                                    <div>
+                                        <button
+                                            className="completeButton"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#staticBackdrop"
+                                            style={{marginRight:"3px"}}
+                                            onClick={() => handleReply(msg.email)}
+                                        >
+                                            reply
+                                        </button>
+                                        <button
+                                            className="cancelButton"
+                                            onClick={(event) => handleCancel(msg._id, event)}
+                                        >
+                                            delete
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </div>
         ))}
-      </div>
-      {/* for email send */}
-      <div
+    </div>
+    {/* for email send */}
+    <div
         className="modal fade"
         id="staticBackdrop"
         data-bs-backdrop="static"
@@ -194,7 +166,8 @@ const FeedBack = () => {
           </div>
         </div>
       </div>
-    </div>
+</div>
+
   );
 };
 
