@@ -12,6 +12,7 @@ import Panding from "./panding";
 import Conform from "./Conform";
 import FeedBack from "./feedback.js";
 import AddProduct from "./AddProduct.js";
+import EditProduct from "./EditProduct.js"
 import Product from "./Product.js";
 import ClubLouvers1 from "./product/ClubLouvers1";
 import ClubLouvers2 from "./product/ClubLouvers2";
@@ -30,6 +31,7 @@ function App() {
           <Route path="/ConformOrders" element={<Conform />}></Route>
           <Route path="/feedback" element={<FeedBack />}></Route>
           <Route path="/addproduct" element={<AddProduct />}></Route>
+          <Route path="/editproduct/:id" element={<EditProduct />}></Route>
           <Route path="/Product" element={<Product />}></Route>
           <Route path="/AboutUsPage" element={<AboutUsPage />}></Route>
           <Route path="/ContactUsPage" element={<ContactUsPage />}></Route>
