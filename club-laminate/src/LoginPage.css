@@ -1,82 +1,245 @@
-/* Scoped styling for the LoginPage only */
+/* Modern Login Page Styling */
+:root {
+  --primary-color: green;
+  --primary-dark: #008800;
+  --dark-color: #232931;
+  --light-color: #f7f7fa;
+  --accent-color: #393e46;
+  --shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --input-bg: #f9f9f9;
+  --input-border: #e0e0e0;
+  --input-focus: green;
+}
+
 .login-page-container {
-  height: 78vh;
+  min-height: 40vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background: linear-gradient(120deg, #50e787, #89f0eb); */
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+  padding: 20px;
+  margin-top: 50px;
 }
 
-.login-page-container .login-container {
-  max-width: 900px;
+.login-container {
+  max-width: 900px !important;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 16px !important;
   overflow: hidden;
-  background: white;
+  box-shadow: var(--shadow) !important;
+  position: relative;
+  z-index: 10;
+  margin: 0 !important;
 }
 
-.login-page-container .form-container {
+/* Left side (Welcome section) */
+.login-container .bg-primary {
+  background: var(--primary-color) !important;
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 20px;
+  align-items: center;
+  padding: 60px 30px;
 }
 
-.login-page-container h2 {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #2c3e50;
-  text-align: center;
-}
-
-.login-page-container input::placeholder {
-  font-size: 0.95rem;
-  color: #95a5a6;
-}
-
-.login-page-container .form-group {
-  margin-bottom: 1rem;
-}
-
-.login-page-container button {
-  width: 100%;
-  padding: 0.75rem;
-  border-radius: 5px;
-  font-size: 1rem;
-  font-weight: bold;
-  margin-top: 1rem;
-}
-
-.login-page-container .btn-block {
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.login-page-container .card {
-  border: none;
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.login-page-container .circle-one,
-.login-page-container .circle-two {
+.login-container .bg-primary::before {
+  content: '';
   position: absolute;
-  border-radius: 50%;
-  background-color: rgba(52, 152, 219, 0.3);
-}
-
-.login-page-container .circle-one {
-  width: 200px;
-  height: 200px;
   top: -50px;
   left: -50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-.login-page-container .circle-two {
-  width: 300px;
-  height: 300px;
-  bottom: -100px;
-  right: -100px;
+.login-container .bg-primary::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  right: -80px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.login-container .display-4 {
+  position: relative;
+  z-index: 5;
+  font-weight: 600;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.login-container .bg-primary p {
+  font-size: 18px;
+  opacity: 0.9;
+  text-align: center;
+  max-width: 80%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+/* Right side (Form) */
+.form-container {
+  background-color: white;
+  padding: 40px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-container h2 {
+  color: var(--accent-color);
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.form-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+.form-container .form-control {
+  height: 50px;
+  padding: 12px 16px;
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+  background-color: var(--input-bg);
+  font-size: 16px;
+  transition: all 0.3s ease;
+  color: var(--dark-color);
+}
+
+.form-container .input-group-text {
+  border-radius: 8px 0 0 8px;
+  border-color: var(--input-border);
+}
+
+.form-container .form-control.border-start-0 {
+  border-radius: 0 8px 8px 0;
+}
+
+.form-container .form-control:focus {
+  outline: none;
+  border-color: var(--input-focus);
+  box-shadow: 0 0 0 3px rgba(0, 128, 0, 0.15);
+  background-color: #ffffff;
+}
+
+.form-container .btn-primary {
+  height: 50px;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 128, 0, 0.2);
+  margin-top: 10px;
+}
+
+.form-container .btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 128, 0, 0.3);
+}
+
+.form-container .btn-primary:active {
+  transform: translateY(-1px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .login-container {
+    max-width: 95% !important;
+    margin: 0 auto !important;
+  }
+  
+  .form-container {
+    padding: 30px !important;
+  }
+  
+  .form-container h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .login-page-container {
+    padding: 15px;
+    align-items: flex-start;
+    padding-top: 50px;
+  }
+  
+  .login-container {
+    max-width: 100% !important;
+    margin: 0 10px !important;
+    border-radius: 12px !important;
+  }
+  
+  /* Add a mini-banner for mobile */
+  .login-container::before {
+    content: '';
+    display: block;
+    height: 8px;
+    background-color: var(--primary-color);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+  }
+  
+  .form-container {
+    padding: 25px 20px !important;
+  }
+  
+  .form-container h2 {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+  
+  .form-container h2::after {
+    width: 50px;
+    height: 2px;
+    bottom: -8px;
+  }
+  
+  .form-container .form-control {
+    height: 45px;
+    padding: 10px 15px;
+    font-size: 15px;
+  }
+  
+  .form-container .input-group-text {
+    padding: 0 10px;
+    font-size: 14px;
+  }
+  
+  .form-group.mb-4 {
+    margin-bottom: 16px !important;
+  }
+  
+  .form-container .btn-primary {
+    height: 45px;
+    padding: 10px 20px;
+    font-size: 15px;
+  }
 }
