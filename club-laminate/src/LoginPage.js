@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Importing Bootstrap
 import './LoginPage.css'; // Custom CSS for additional styling
+import { FaUser, FaLock } from 'react-icons/fa'; // Import icons
 
 const LoginPage = () => {
   const [userName, setUserName] = useState('');
@@ -60,36 +61,51 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="login-page-container d-flex align-items-center justify-content-center">
+    <div className="login-page-container">
       <div className="container login-container card shadow-lg">
         <div className="row">
           <div className="col-md-6 d-none d-md-flex align-items-center justify-content-center bg-primary text-white">
-            <h1 className="display-4">Welcome Back!</h1>
+            <div className="text-center">
+              <h1 className="display-4">Welcome Back!</h1>
+              <p className="mt-3">Log in to manage your products and orders at Club Laminate</p>
+            </div>
           </div>
-          <div className="col-md-6 p-4 form-container">
-            <h2 className="text-center mb-4">Login</h2>
+          <div className="col-md-6 form-container">
+            <h2 className="text-center">Admin Login</h2>
             <form onSubmit={handleLogin}>
-              <div className="form-group mb-3">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Username"
-                  value={userName}
-                  onChange={(e) => setUserName(e.target.value)}
-                  required
-                />
+              <div className="form-group mb-4 position-relative">
+                <div className="input-group">
+                  <span className="input-group-text bg-transparent border-end-0">
+                    <FaUser className="text-muted" />
+                  </span>
+                  <input
+                    type="text"
+                    className="form-control border-start-0"
+                    placeholder="Username"
+                    value={userName}
+                    onChange={(e) => setUserName(e.target.value)}
+                    required
+                  />
+                </div>
               </div>
-              <div className="form-group mb-3">
-                <input
-                  type="password"
-                  className="form-control"
-                  placeholder="Password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  required
-                />
+              
+              <div className="form-group mb-4 position-relative">
+                <div className="input-group">
+                  <span className="input-group-text bg-transparent border-end-0">
+                    <FaLock className="text-muted" />
+                  </span>
+                  <input
+                    type="password"
+                    className="form-control border-start-0"
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                  />
+                </div>
               </div>
-              <button type="submit" className="btn btn-primary btn-block">
+              
+              <button type="submit" className="btn btn-primary btn-block w-100">
                 Login
               </button>
             </form>
