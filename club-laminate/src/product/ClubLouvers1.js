@@ -194,11 +194,7 @@ function Club_louvers1() {
     );
   });
 
-  return (
-    <div className="container">
-      <div className="row">{view}</div>
-    </div>
-  );
+  return <div className="row">{view}</div>;
 }
 
 export default Club_louvers1;
