@@ -82,56 +82,48 @@
   box-shadow: var(--shadow);
 }
 
-/* Product Card Styling */
-.product-card {
-  height: 100%;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 30px;
+/* Product container and card styles */
+.product-container {
+  padding: 0 15px;
 }
 
-.product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+.product-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background: white;
+  height: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .product-image {
   width: 100%;
-  height: 250px;
+  height: 200px;
   object-fit: cover;
-  display: block;
-  flex-shrink: 0;
+  border-radius: 8px 8px 0 0;
 }
 
 .product-details {
-  padding: 1rem;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
+  padding: 15px;
 }
 
-.product-name {
+.product-title {
   font-size: 18px;
-  margin-bottom: 5px;
-  color: var(--accent-color);
   font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.product-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
 }
 
 .product-price {
-  font-size: 16px;
-  font-weight: bold;
-  color: var(--primary-color);
-}
-
-.product-description, .Product-Discription {
-  font-size: 14px;
-  color: #777;
-  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 15px;
 }
 
 /* Admin actions styling */
@@ -298,15 +290,54 @@
     padding: 4px 8px !important;
     font-size: 12px !important;
   }
-}
 
-.product-container {
-  padding: 0 15px;
-}
-
-@media (max-width: 576px) {
   .product-container {
     padding: 0 10px;
+  }
+  
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .col-sm-6 {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .product-card {
+    margin-bottom: 20px;
+  }
+
+  .product-image {
+    height: 200px;
+  }
+
+  .product-details {
+    padding: 15px;
+  }
+
+  .product-title {
+    font-size: 16px;
+  }
+
+  .product-description {
+    font-size: 14px;
+  }
+
+  .product-price {
+    font-size: 16px;
+  }
+
+  /* Admin controls for mobile */
+  .admin-controls {
+    margin-top: 10px;
+  }
+
+  .admin-controls button {
+    padding: 8px 16px;
+    font-size: 14px;
+    margin: 5px;
   }
 }
   
