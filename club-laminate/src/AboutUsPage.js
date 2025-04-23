@@ -51,8 +51,8 @@ function AboutUsPage() {
             <p>Co-Founder & CEO</p>
           </div>
           <div className="team-member">
-            <img src="./images/teammembers/MarketingDirector.jpg" alt="Sanket Bhimani" />
-            <h3>Sanket Bhimani</h3>
+            <img src="./images/teammembers/ceo.jpg" alt="Sanket Bhimani" />
+            <h3>Vraj Kanani</h3>
             <p>Marketing Director</p>
           </div>
         </div>
