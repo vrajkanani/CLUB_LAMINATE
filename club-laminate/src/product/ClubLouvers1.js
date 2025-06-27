@@ -177,14 +177,14 @@ function Club_louvers1() {
 
   let view = pro.map((pro, index) => {
     return (
-      <div key={index} className="col-lg-3 col-md-4 col-sm-6 mb-4">
+      <div key={index} className="col-lg-3 col-md-4 col-sm-6 mb-4" data-aos="fade-up">
         <div className="product-card">
           <img
             src={pro.ProductImage}
             alt="Product"
             className="product-image"
           />
-          <div className="product-details" data-aos="fade-up">
+          <div className="product-details">
             <h2 className="product-name pt-2">{pro.ProductName}</h2>
             <p className="product-price p-1">₹{pro.ProductPrice}</p>
             <p className="Product-Discription p-1">{pro.ProductDescription}</p>
