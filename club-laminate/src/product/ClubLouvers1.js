@@ -177,8 +177,8 @@ function Club_louvers1() {
 
   let view = pro.map((pro, index) => {
     return (
-      <div key={index} className="col-lg-3 col-md-4 col-sm-6 mb-4" data-aos="fade-up">
-        <div className="product-card">
+      <div key={index} className="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div className="product-card" data-aos="fade-up">
           <img
             src={pro.ProductImage}
             alt="Product"
