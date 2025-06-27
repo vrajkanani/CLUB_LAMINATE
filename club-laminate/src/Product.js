@@ -43,7 +43,7 @@ function Products() {
   return (
     <div className="row">
       {products.map((product) => (
-        <div key={product.id} className="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div key={product.id} className="col-lg-3 col-md-4 col-sm-6 mb-4"  data-aos="fade-up">
           <div className="product-card">
             <img src={product.ProductImage} alt="Product" className="product-image" />
             <div className="product-details">

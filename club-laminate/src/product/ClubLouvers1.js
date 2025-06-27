@@ -184,7 +184,7 @@ function Club_louvers1() {
             alt="Product"
             className="product-image"
           />
-          <div className="product-details">
+          <div className="product-details" data-aos="fade-up">
             <h2 className="product-name pt-2">{pro.ProductName}</h2>
             <p className="product-price p-1">₹{pro.ProductPrice}</p>
             <p className="Product-Discription p-1">{pro.ProductDescription}</p>
