@@ -61,15 +61,26 @@ import ClubLouvers1 from "./product/ClubLouvers1";
 
 function App() {
   useEffect(() => {
+    // Disable right-click
     const handleContextMenu = (event) => {
-      event.preventDefault(); // disable right click
+      event.preventDefault();
+    };
+
+    // Disable Ctrl+U
+    const handleKeyDown = (event) => {
+      if (event.ctrlKey && event.key.toLowerCase() === "u") {
+        event.preventDefault();
+        alert("View Source is disabled 🚫");
+      }
     };
 
     document.addEventListener("contextmenu", handleContextMenu);
+    document.addEventListener("keydown", handleKeyDown);
 
-    // cleanup on unmount
+    // cleanup
     return () => {
       document.removeEventListener("contextmenu", handleContextMenu);
+      document.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
 
@@ -97,3 +108,4 @@ function App() {
 }
 
 export default App;
+
