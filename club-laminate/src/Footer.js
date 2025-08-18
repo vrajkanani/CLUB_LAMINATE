@@ -33,11 +33,6 @@ const Footer = () => {
                   Services
                 </Link>
               </li>
-              <li>
-                <Link to="/Projects" className="nav-link text-animation">
-                  Projects
-                </Link>
-              </li>
             </ul>
           </div>
           <div>
@@ -101,3 +96,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
