@@ -70,7 +70,6 @@ function App() {
     const handleKeyDown = (event) => {
       if (event.ctrlKey && event.key.toLowerCase() === "u") {
         event.preventDefault();
-        alert("View Source is disabled 🚫");
       }
     };
 
