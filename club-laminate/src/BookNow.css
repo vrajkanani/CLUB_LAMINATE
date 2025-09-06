@@ -16,7 +16,6 @@
   align-items: center;
   min-height: 100vh;
   padding: 40px 20px;
-  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
 }
 
 .bn-form-wrapper {
@@ -160,3 +159,4 @@
     padding: 12px 20px;
   }
 }
+
