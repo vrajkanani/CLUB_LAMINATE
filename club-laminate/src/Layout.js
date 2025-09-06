@@ -3,6 +3,7 @@ import Header from "./Header.js"
 import Footer from "./Footer";
 import { Outlet } from "react-router-dom";
 import { PiArrowFatUpDuotone } from "react-icons/pi";
+import "./Layout.css";
 
 
 function Layout() {
@@ -38,3 +39,4 @@ function Layout() {
 }
 
 export default Layout;
+
