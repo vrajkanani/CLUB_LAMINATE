@@ -104,71 +104,157 @@ const FeedBack = () => {
         ))}
     </div>
     {/* for email send */}
-    <div
-        className="modal fade"
-        id="staticBackdrop"
-        data-bs-backdrop="static"
-        data-bs-keyboard="false"
-        tabIndex="-1"
-        aria-labelledby="staticBackdropLabel"
-        aria-hidden="true"
-        style={{ display: showModal ? "block" : "none" }}
-      >
-        <div className="modal-dialog">
-          <div className="modal-content">
-            <div className="modal-header">
-              <h5 className="modal-title" id="staticBackdropLabel">
-                Reply to User
-              </h5>
-              <button
-                type="button"
-                className="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div className="modal-body">
-              <form ref={form}>
-                <label>Name</label>
-                <input
-                  type="text"
-                  name="from_name"
-                  style={{ border: "1px solid black" }}
-                />
-                <label>Email</label>
-                <input
-                  type="email"
-                  name="from_email"
-                  style={{ border: "1px solid black" }}
-                  defaultValue={replyEmail}
-                />
-                <label>Message</label>
-                <br />
-                <textarea name="message" cols={62} rows={10} />
-              </form>
-            </div>
-            <div className="modal-footer">
-              <button
-                type="button"
-                className="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <button
-                type="button"
-                className="btn btn-primary"
-                onClick={sendEmail}
-              >
-                Send
-              </button>
-            </div>
-          </div>
-        </div>
+    // <div
+    //     className="modal fade"
+    //     id="staticBackdrop"
+    //     data-bs-backdrop="static"
+    //     data-bs-keyboard="false"
+    //     tabIndex="-1"
+    //     aria-labelledby="staticBackdropLabel"
+    //     aria-hidden="true"
+    //     style={{ display: showModal ? "block" : "none" }}
+    //   >
+    //     <div className="modal-dialog">
+    //       <div className="modal-content">
+    //         <div className="modal-header">
+    //           <h5 className="modal-title" id="staticBackdropLabel">
+    //             Reply to User
+    //           </h5>
+    //           <button
+    //             type="button"
+    //             className="btn-close"
+    //             data-bs-dismiss="modal"
+    //             aria-label="Close"
+    //           ></button>
+    //         </div>
+    //         <div className="modal-body">
+    //           <form ref={form}>
+    //             <label>Name</label>
+    //             <input
+    //               type="text"
+    //               name="from_name"
+    //               style={{ border: "1px solid black" }}
+    //             />
+    //             <label>Email</label>
+    //             <input
+    //               type="email"
+    //               name="from_email"
+    //               style={{ border: "1px solid black" }}
+    //               defaultValue={replyEmail}
+    //             />
+    //             <label>Message</label>
+    //             <br />
+    //             <textarea name="message" cols={62} rows={10} />
+    //           </form>
+    //         </div>
+    //         <div className="modal-footer">
+    //           <button
+    //             type="button"
+    //             className="btn btn-secondary"
+    //             data-bs-dismiss="modal"
+    //           >
+    //             Close
+    //           </button>
+    //           <button
+    //             type="button"
+    //             className="btn btn-primary"
+    //             onClick={sendEmail}
+    //           >
+    //             Send
+    //           </button>
+    //         </div>
+    //       </div>
+    //     </div>
+    //   </div>
+{/* Reply Modal */}
+<div
+  className="modal fade"
+  id="staticBackdrop"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabIndex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+  style={{ display: showModal ? "block" : "none" }}
+>
+  <div className="modal-dialog modal-dialog-centered modal-lg">
+    <div className="modal-content">
+      
+      {/* Modal Header */}
+      <div className="modal-header d-flex justify-content-center" style={{ borderBottom: "none" }}>
+        <h4 className="modal-title fw-bold text-success" id="staticBackdropLabel">
+          ✉️ Reply to User
+        </h4>
       </div>
+
+      {/* Modal Body */}
+      <div className="modal-body">
+        <form ref={form} id="replyForm">
+          <div className="form-group mb-3">
+            <label htmlFor="from_name">Name</label>
+            <input
+              type="text"
+              id="from_name"
+              name="from_name"
+              className="form-control"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+
+          <div className="form-group mb-3">
+            <label htmlFor="from_email">Email</label>
+            <input
+              type="email"
+              id="from_email"
+              name="from_email"
+              className="form-control"
+              placeholder="Enter recipient email"
+              defaultValue={replyEmail}
+              required
+            />
+          </div>
+
+          <div className="form-group mb-3">
+            <label htmlFor="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              className="form-control"
+              rows="6"
+              placeholder="Write your reply..."
+              required
+            />
+          </div>
+        </form>
+      </div>
+
+      {/* Modal Footer */}
+      <div className="modal-footer d-flex justify-content-end border-0">
+        <button
+          type="button"
+          className="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >
+          Close
+        </button>
+        <button
+          type="submit"
+          className="btn btn-success"
+          form="replyForm"
+          onClick={sendEmail}
+        >
+          Reply
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
 </div>
 
   );
 };
 
 export default FeedBack;
+
