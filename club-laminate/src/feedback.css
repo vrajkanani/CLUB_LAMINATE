@@ -72,3 +72,93 @@ button.cancelButton:hover {
     background-color: #dc3545;
     color: #fff;
 }
+
+/* ===== Modal Styling ===== */
+.modal-content {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    background: #ffffff;
+    padding: 10px 15px;
+}
+
+/* Modal header */
+.modal-header {
+    border-bottom: none;
+    background: linear-gradient(135deg, #4caf50, #81c784);
+    color: #fff;
+    border-radius: 12px 12px 0 0;
+    text-align: center;
+}
+
+.modal-title {
+    font-weight: bold;
+    font-size: 1.25rem;
+    width: 100%;
+}
+
+/* Modal body */
+.modal-body {
+    padding: 20px;
+}
+
+.modal-body label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: block;
+    color: #333;
+}
+
+.modal-body .form-control,
+.modal-body input,
+.modal-body textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.modal-body .form-control:focus,
+.modal-body input:focus,
+.modal-body textarea:focus {
+    border: 1px solid #4caf50;
+    outline: none;
+    box-shadow: 0 0 6px rgba(76, 175, 80, 0.4);
+}
+
+/* Modal footer */
+.modal-footer {
+    border-top: none;
+    padding: 15px 20px;
+}
+
+/* Buttons inside modal */
+.modal-footer .btn {
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: transform 0.2s ease;
+}
+
+/* Reply (green) */
+.modal-footer .btn-success {
+    background-color: #28a745;
+    border: none;
+}
+.modal-footer .btn-success:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* Close (gray) */
+.modal-footer .btn-secondary {
+    background-color: #6c757d;
+    border: none;
+}
+.modal-footer .btn-secondary:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+}
