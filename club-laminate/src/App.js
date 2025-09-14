@@ -16,6 +16,7 @@ import EditProduct from "./EditProduct.js";
 import Product from "./Product.js";
 import ClubLouvers1 from "./product/ClubLouvers1";
 import ScrollToTop from "./ScrollToTop";
+import PageNotFound from "./PageNotFound";
 
 function App() {
   useEffect(() => {
@@ -59,6 +60,7 @@ function App() {
           <Route path="/ContactUsPage" element={<ContactUsPage />} />
           <Route path="/ServicesPage" element={<Services />} />
           <Route path="/1 club louvers" element={<ClubLouvers1 />} />
+          <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
