@@ -151,6 +151,7 @@ const FeedBack = () => {
                     type="text"
                     id="from_name"
                     name="from_name"
+                    value="club laminate"
                     className="form-control"
                     placeholder="Enter your name"
                     required
@@ -210,3 +211,4 @@ const FeedBack = () => {
 };
 
 export default FeedBack;
+
