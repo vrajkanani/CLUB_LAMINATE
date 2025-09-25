@@ -76,14 +76,14 @@ const Footer = () => {
           </div>
         </div>
         <div className="social-icons">
-          <Link to="https://www.instagram.com/vraj_1108/" className="nav-link">
-            <FaInstagram />
+          <Link to="https://www.instagram.com/vraj_1108/" className="nav-link" target="_blank">
+            <FaInstagram size={30} />
           </Link>
-          <Link to="https://www.instagram.com/vraj_1108/" className="nav-link">
-            <CiFacebook />
+          <Link to="https://www.instagram.com/vraj_1108/" target="_blank"  className="nav-link">
+            <CiFacebook size={30}/>
           </Link>
-          <Link to="https://github.com/vrajkanani?tab=repositories" className="nav-link">
-            <FaGithub />
+          <Link to="https://github.com/vrajkanani?tab=repositories" target="_blank" className="nav-link">
+            <FaGithub size={30} />
           </Link>
         </div>
         <p className="copyright text-animation">
@@ -96,4 +96,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
 
