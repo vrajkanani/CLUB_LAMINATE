@@ -91,7 +91,7 @@
 
 .social-icons a {
   color: white;
-  font-size: 22px;
+  font-size: 45px;
   transition: transform 0.3s ease, color 0.3s ease;
   display: flex;
   align-items: center;
@@ -192,3 +192,4 @@
     margin: 10px 0;
   }
 }
+
