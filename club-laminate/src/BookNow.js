@@ -238,7 +238,7 @@ const BookNow = () => {
           </div>
           <div className="bn-form-row bn-submit">
             <button type="submit" className="bn-submit-btn">
-              Submit
+              Order
             </button>
           </div>
         </form>
@@ -248,3 +248,4 @@ const BookNow = () => {
 };
 
 export default BookNow;
+
